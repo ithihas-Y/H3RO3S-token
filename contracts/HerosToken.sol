@@ -10,9 +10,8 @@ import '@openzeppelin/contracts/access/Ownable.sol';
 contract H3RO3S is ERC20,Ownable {
 
 
-    constructor(string memory __name,string memory __symbol,uint256 supply,address payable _treasury) ERC20(__name,__symbol){
+    constructor(string memory __name,string memory __symbol,uint256 supply) ERC20(__name,__symbol){
         _mint(_msgSender(),supply*(10**decimals()));
-        treasury = _treasury;
     }
 
 }
